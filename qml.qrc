@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>html/home.htm</file>
+        <file>html/js/jquery.mobile-1.4.5.min.js</file>
+        <file>html/js/jquery-1.10.2.min.js</file>
+        <file>html/css/jquery.mobile-1.4.5.min.css</file>
+        <file>html/css/images/ajax-loader.gif</file>
+        <file>main.mobile.qml</file>
+        <file>main.desktop.qml</file>
+        <file>html/js/qwebchannel.js</file>
+        <file>localhost.cert</file>
+        <file>localhost.key</file>
+        <file>html/css/style.css</file>
+        <file>html/js/home.js</file>
+    </qresource>
+</RCC>

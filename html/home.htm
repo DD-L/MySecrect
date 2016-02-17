@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).bind('mobileinit',function(){
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+</script>
+<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+
+<!--
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(document).bind('mobileinit',function(){
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+</script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+-->
+
+
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header" data-position="fixed">
+    <a href="#About" class="ui-btn ui-corner-all ui-shadow ui-icon-info ui-btn-icon-left">About</a>
+    <h1>MySecret</h1>
+    <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left" id="exit">Quit</a>
+  </div>
+
+  <div data-role="panel" id="About">
+         <h2>About me
+         <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-l ui-btn-icon-left">Close</a>
+         </h2>
+         <p>MySecret</p>
+  </div>
+
+   <div data-role="main" class="ui-content">
+       <div class="ui-grid-solo">
+           <div class="ui-block-a">
+               <a href="#pagetwo" class="ui-btn ui-corner-all ui-shadow bigbutton" data-transition="pop">Normal<br>Mode</a>
+           </div>
+        </div>
+       <div class="ui-grid-solo">
+           <div class="ui-block-a">
+               <a href="#pagethree" class="ui-btn ui-corner-all ui-shadow bigbutton" data-transition="pop">Secure<br>Mode</a>
+           </div>
+        </div>
+        
+   </div>
+
+
+   <!--
+  <div data-role="footer" data-position="fixed">
+    <h1>Fixed 页脚</h1>
+  </div>
+  -->
+</div> <!-- pageone-->
+
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header" data-position="fixed">
+    <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="pop">Home</a>
+    <h1>MySecret</h1>
+    <a href="#pageTwoPanel" class="ui-btn ui-corner-all ui-shadow ui-icon-grid ui-btn-icon-left">Panel</a>
+  </div>
+
+  <div data-role="panel" id="pageTwoPanel" data-position="right">
+
+    <a href="#pagetwo" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Close Panel</a>
+    <div class="ui-field-contain">
+      <p></p>
+      <fieldset><legend><strong>Tools</strong></legend>
+
+      <a href="#statePopup" data-rel="popup" class="ui-btn ui-btn-inline ui-shadow" id="clientState" data-transition="flip">State</a>
+      <a href="#statePopup" data-rel="popup" class="ui-btn ui-btn-inline ui-shadow ui-connect-button" id="connect" data-transition="flip">Connect</a>
+      <!--
+      <a href="#statePopup" data-rel="popup" class="ui-btn ui-corner-all ui-shadow" id="disconnect" data-transition="flip">Disconnect</a>
+      -->
+      <div data-role="popup" data-history="false" id="statePopup" class="ui-content">
+        <div id="clientStateMessage">State Unknown</div>
+      </div>
+      <!-- value: enum { Connecting, Connected, Disconnect }  -->
+      <input type="hidden" name="clientState" id="clientState" />
+
+      <a href="#toolsPopup" data-rel="popup" class="ui-btn ui-corner-all ui-shadow" id="clearResults">Clear Results</a>
+      <a href="#toolsPopup" data-rel="popup" class="ui-btn ui-corner-all ui-shadow" id="clearClipboard">Clear Clipboard</a>
+      <div data-role="popup" data-history="false" id="toolsPopup" class="ui-content">
+        <div id="toolsStateMessage">Cleanup completed</div>
+      </div>
+
+      </fieldset>
+    </div>
+
+    <div class="ui-field-contain">
+      <p></p>
+      <fieldset><legend><strong>Server/Client Status</strong></legend>
+      <textarea readonly="readonly" class="smallfont" id="status" placeholder="Server/Client Status"></textarea>
+      <a href="#" class="ui-btn ui-btn-inline ui-shadow" id="clearStatus">Clear Logs</a>
+      </fieldset>
+    </div>
+  </div>
+
+   <div data-role="main" class="ui-content">
+       <div class="ui-grid">
+           <div class="ui-block-a ui-block-key-left">
+               <label for="key"><strong>key: </strong></label>
+           </div>
+           <input type="hidden" name="key" id="keyvalue"/>
+           <div class="ui-block-b ui-block-key-center" id="keycipher">
+               <input type="password" name="key" id="keycipher" placeholder="Please set the secret key." />
+           </div>
+           <div class="ui-block-b ui-block-key-center" id="keyplain">
+               <input type="text" name="key" id="keyplain" placeholder="Please set the secret key." />
+           </div>
+           <div class="ui-block-c ui-block-key-right">
+               <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" id="keytextmode">plain</a>
+           </div>
+        </div>
+        
+       <div class="ui-field-contain">
+           <textarea name="addinfo" id="info" placeholder="Please enter the characters you want to encrypt/decrypt."></textarea>
+
+           <div class="ui-grid-a">
+               <div class="ui-block-a">
+                   <a href="#pagetwo" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" id="encrypt">Encrypt</a>
+               </div>
+               <div class="ui-block-b">
+                   <a href="#pagetwo" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" id="decrypt">Decrypt</a>
+               </div>
+           </div>
+       </div>
+       <div class="ui-field-contain">
+           <textarea name="addinfo" readonly="readonly" id="results" placeholder="Results"></textarea>
+
+           <a href="#copiedPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" id="copy" data-transition="flip">Copy</a>
+           <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-quit-button" id="quit">Quit</a>
+
+           <div data-role="popup" data-history="false" id="copiedPopup" class="ui-content">
+             <div id="copiedState">Copied !</div>
+           </div>
+
+       </div>
+   </div>
+  <div data-role="footer" data-position="fixed">
+    <h1></h1>
+  </div>
+</div> <!-- pagetwo -->
+
+
+<div data-role="page" id="pagethree">
+  <div data-role="header" data-position="fixed">
+    <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left" data-transition="pop">Home</a>
+    <h1>MySecret</h1>
+    <a href="#PageThreePanel" class="ui-btn ui-corner-all ui-shadow ui-icon-grid ui-btn-icon-left">Panel</a>
+  </div>
+
+  <div data-role="panel" id="PageThreePanel" data-position="right">
+         <h2>Panel Header</h2>
+         <p>This is a test...</p>
+         <a href="#pagethree" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-arrow-r ui-btn-icon-left">Close Panel</a>
+  </div>
+
+  <div data-role="main" class="ui-content">
+   <lable>this is a test...</lable>
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    <h1></h1>
+  </div>
+</div> <!-- pagethree-->
+
+
+</body>
+<script type="text/javascript" src="./js/qwebchannel.js"></script>
+<script type="text/javascript" src="./js/home.js"></script>
+</html>
