@@ -13,8 +13,6 @@ CONFIG += c++11 console
 SOURCES += main.cpp \
     websocketchannel/websocketclientwrapper.cpp \
     websocketchannel/websockettransport.cpp \
-    websocket/echoserver.cpp \
-    websocket/sslechoserver.cpp \
     webchannelobject/webchannelobject.cpp
 
 RESOURCES += qml.qrc
@@ -28,8 +26,6 @@ DISTFILES +=
 HEADERS += \
     websocketchannel/websocketclientwrapper.h \
     websocketchannel/websockettransport.h \
-    websocket/echoserver.h \
-    websocket/sslechoserver.h \
     webchannelobject/webchannelobject.h
 
 INCLUDEPATH += ./lproxy/contrib/cryptopp/cryptopp ./lproxy/src/core/crypto
