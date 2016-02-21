@@ -104,9 +104,9 @@ $(document).ready(function(){
       return;
     }
     var key = $("input#keyvalue").val();
-    commun_object.receiveKey(key);
-
-    commun_object.receiveInfo2Encrypt(text);
+    //commun_object.receiveKey(key);
+    //commun_object.receiveInfo2Encrypt(text);
+    commun_object.encrypt(key, text);
   });
   $("#decrypt").click(function(){
     var text = $("#info").val();
@@ -114,9 +114,9 @@ $(document).ready(function(){
       return;
     }
     var key = $("input#keyvalue").val();
-    commun_object.receiveKey(key);
-
-    commun_object.receiveInfo2Decrypt(text);
+    //commun_object.receiveKey(key);
+    //commun_object.receiveInfo2Decrypt(text);
+    commun_object.decrypt(key, text);
   });
 
 

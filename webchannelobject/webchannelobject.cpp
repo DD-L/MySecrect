@@ -4,6 +4,8 @@
 #include <QtWebSockets/QWebSocketServer>
 #include <QClipboard>
 
+#include "core/cryptowrapper.h"
+
 QT_BEGIN_NAMESPACE
 
 CommunObject::CommunObject(QGuiApplication* app)
@@ -12,7 +14,6 @@ CommunObject::CommunObject(QGuiApplication* app)
 }
 CommunObject::~CommunObject() {
     //qDebug() << "~CommunObject()";
-    //delete m_engine;
 }
 
 void CommunObject::receiveStatus(const QString& text) {
@@ -20,6 +21,7 @@ void CommunObject::receiveStatus(const QString& text) {
     emit sendStatus(text);
 }
 
+/*
 void CommunObject::receiveKey(const QString& key) {
     qDebug() << "receiveKey: " << key;
     // debug
@@ -48,6 +50,42 @@ void CommunObject::receiveInfo2Decrypt(const QString& info) {
 
 
     emit sendResults(info);
+}
+*/
+void CommunObject::encrypt(const QString &key, const QString &info) {
+    qDebug() << "Key: " << key;
+    qDebug() << "info: " << info;
+    try {
+        CryptoWrapper crypto(key, info);
+        QString results;
+        crypto.encrypt(results);
+        emit sendResults(results);
+        emit sendStatus("completed the Encryption operations");
+        qDebug() << "Results: " << results;
+    }
+    catch (...) {
+        const QString message = "Error occurred while Encrypting";
+        emit sendStatus(message);
+        qWarning() << message;
+    }
+}
+
+void CommunObject::decrypt(const QString &key, const QString &info) {
+    qDebug() << "Key: " << key;
+    qDebug() << "info: " << info;
+    try {
+        CryptoWrapper crypto(key, info);
+        QString results;
+        crypto.decrypt(results);
+        emit sendResults(results);
+        emit sendStatus("completed the Decryption operations");
+        qDebug() << "Results: " << results;
+    }
+    catch (...) {
+        const QString message = "Error occurred while Decrypting";
+        emit sendStatus(message);
+        qWarning() << message;
+    }
 }
 
 void CommunObject::copy2clipboard(const QString& results) {
