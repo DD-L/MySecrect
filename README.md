@@ -1,4 +1,161 @@
 # MySecrect
 A simple encryption tool
 
-Hybrid App
+### Version
+
+* v0.0.2-alpha
+	
+	1. 新特性
+		* 从这个版本(v0.0.2-alpha)开始，MySecret 支持易用的图形用户界面. 
+		* MySecret 成为“混合式 `Hybrid` 应用程序”, 采用 C++/JavaScript/HTML/CSS 编写. 
+		* 多平台支持：Android, Windows, MinGW, Linux, Cygwin.
+			| GUI   | CLI   |
+			|:-----:|:-----:|
+			|Android| Linux |
+			|Windows| Cygwin|
+			| MinGW | MinGW | 
+		
+		* 不再对 "Secret Key" 做 首尾空白字符 剔除处理 `trim()`.
+	2. 二进制程序 (GUI)
+		* Android
+			* x86  暂未提供
+			* armeabi 暂未提供
+			* [armeabi-v7]()
+		* Windows
+			* msvc 2013 暂未提供
+			* [MinGW-4.9.2-32bit]()
+		* ...
+
+	3. 部分截图.
+		|Desktop|Android|
+		|---|---|
+		|![windows](./doc/Screenshots/1.png)| ![Android](./doc/Screenshots/3.png)|
+		|![windows](./doc/Screenshots/2.png)| ![Android](./doc/Screenshots/4.png)|
+		||![Android](./doc/Screenshots/5.png) |
+
+	4. Known Issues.
+
+		此版本问题较多: [Issues]()
+		* ...
+		* ...
+
+* v0.0.1
+
+	命令行界面的 MySecret。 此版本与 v0.0.2-alpha CLI 相差无几。
+	
+	```
+	$ ./mysecret.exe --help
+
+	'mysecret' will auto-load the './key' file from the current
+	working path, then complete the encryption and decryption
+	tasks with the key...
+	
+	Usage:
+	  ./mysecret [option, ..] [ file | text ]
+	  e.g.
+	    ./mysecret -e -f plain_file_name
+	    ./mysecret -d -f cipher_file_name
+	    ./mysecret -e -s plain_text
+	    ./mysecret -d -s cipher_text
+	    ./mysecret -h
+	    ./mysecret -v
+	option:
+	  -h, --help           Show this message.
+	  -v, --version        Show version.
+	  -e, --encrypt        Encode.
+	  -d, --decrypt        Decode.
+	  -f, --file           File.
+	  -s, --string         String.
+
+	```
+
+
+### Build
+
+##### Get Code
+*
+	```shell
+	$ git clone -b core https://github.com/DD-L/MySecrect
+	$ cd MySecrect
+	$ git submodule init
+	$ git submodule update
+	```
+
+##### GUI 
+
+1. 编译 lproxy/contrib/cryptopp 静态库 `libcryptopp.a`. 
+
+	如果想自己编译 libcryptopp.a , 可以参照以下步骤（以下编译均在 Windows 系统下完成）：
+
+	1.1 编译 Desktop Qt 5.5.1 MinGW 32bit 版本的 cryptopp 静态库 `libcryptopp.a`
+
+		要求： 
+		* Desktop Qt 5.5.1 MinGW 32bit
+		
+		进入 Qt 5.5 for Desktop (MinGW 4.9.2 32 bit) 命令行界面执行：
+
+		> cd /D path\to\MySecret\..\MySecret\lproxy\contrib\cryptopp
+		> mingw32-make.exe
+
+		将生成的 path\to\MySecret\..\MySecret\lproxy\contrib\cryptopp\cryptopp\libcryptopp.a
+		拷贝到 path\to\MySecret\..\MySecret\libs\MinGW32bit 目录下
+		完整名为 path\to\MySecret\..\MySecret\libs\MinGW32bit\libcryptopp.a
+		
+		
+	1.2 Android for armeabi-v7a (GCC 4.9. Qt 5.5.1) on Windows 版本的 cryptopp 静态库 `libcryptopp.a`
+
+		要求：
+		* Cygwin
+		* Android NDK for windows
+
+		进入 Cygwin 环境，在 Cygwin 命令行界面执行
+		
+		$ cd "path\to\MySecret\..\MySecret\lproxy\contrib\cryptopp"
+		$ cat readme.txt
+		# 参照 readme.txt 的描述，在 Cygwin 环境下编译 libcryptopp.a
+		# 例如
+		$ #tar xvfJ ./cryptopp.bak.tar.xz; mv cryptopp.bak cryptopp
+		$ git clone https://github.com/DD-L/cryptopp # 推荐
+		$ export ANDROID_NDK_ROOT=/d/Qt/android/android-ndk-r10e
+        $ . ./setenv-android.sh armeabi-v7a gnu-static # 忽略提示的ERROR
+        $ export ANDROID_NDK_ROOT=/cygdrive/d/Qt/android/android-ndk-r10e
+        $ . ./setenv-android.sh armeabi-v7a gnu-static # 忽略提示的ERROR
+        $ export ANDROID_NDK_ROOT="D:/Qt/android/android-ndk-r10e"
+        $ . ./setenv-android.sh armeabi-v7a gnu-static 
+        $ cd cryptopp
+        $ mv GNUmakefile-cross GNUmakefile-cross.old
+        $ cp ../GNUmakefile-cross ./GNUmakefile-cross
+        $ #make -f GNUmakefile-cross static dynamic cryptest.exe
+        $ make -f GNUmakefile-cross static
+        $ mv GNUmakefile-cross.old GNUmakefile-cross
+
+		#如果以上 setenv-android.sh 程序 3 次都未能成功运行，请检查 .sh 文件的编码。
+		#如果是编码或行尾换行符问题：
+		#可以使用 dos2unix 转换；
+		#也可以在 使用 git clone、 pull、submodule update 等下载代码文件之前，
+		#设置 git config --global core.autocrlf false ，从而避免 git 自动转换行尾换行符。
+
+		将生成的 path\to\MySecret\..\MySecret\lproxy\contrib\cryptopp\cryptopp\libcryptopp.a
+		拷贝到 path\to\MySecret\..\MySecret\libs\Androidarmeabiv7a\ 目录下， 
+		完整名为 path\to\MySecret\..\MySecret\libs\Androidarmeabiv7a\libcryptopp.a
+		
+
+2. 修改 project 文件 `MySecret.pro` 中的变量:
+	* INCLUDEPATH
+	* LIBS
+
+3. 工程导入 `lproxy/src/core/crypto/*.h` 和 `lproxy/src/core/crypto/*.cpp`
+
+4. ...
+
+##### CLI
+*
+	```shell
+	$ cd /path/to/MySecret/CLI
+	$ make
+	```
+
+
+
+	
+	
