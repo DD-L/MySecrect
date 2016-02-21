@@ -1,30 +1,27 @@
 ﻿.ui-block-key-left {
-    //background-color: red;
+    /*background-color: red;*/
     width: 10%; 
-    //font-size: 40px;
-    //vertical-align: center;
-    //padding:25px;   
+    /*font-size: 40px;*/
+    /*vertical-align: center;*/
+    /*padding:25px;*/
     height:50px;   
     line-height:50px; 
     overflow:hidden;   
     font-weight: bold;
 }
 .ui-block-key-center {
-    //background-color: blue;
     width: 70%;
 }
 .ui-block-key-right {
-    //background-color: blue;
     width: 18%;
 }
 
 .ui-block-a, .ui-block-b, .ui-block-c {
-    //background-color: lightgray;
-    //border: 1px solid black;
-    //height: 50px;
+    /*background-color: lightgray;*/
+    /*border: 1px solid black;*/
+    /*height: 50px;*/
     font-weight: bold;
     text-align: center;
-    //padding: 30px;
     padding: 0px;
     border: 0px;
     margin: 0px;
@@ -34,9 +31,11 @@
     float:right;
 }
 .bigbutton {
-    //background-color: lightgray;
-    height: 120px;
-    font-size: 50px;
+    /*background-color: lightgray;*/
+    /*height: 120px;*/
+    /*height: 13%;*/
+    /*font-size: 46px;*/
+    font-size: 298%;
     font-weight: bold;
 }
 
