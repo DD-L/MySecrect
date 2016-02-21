@@ -28,10 +28,10 @@ A simple encryption tool
 
 	3. 部分截图.
 		|Desktop|Android|
-		|---|---|
-		|![windows](./doc/Screenshots/1.png)| ![Android](./doc/Screenshots/3.png)|
-		|![windows](./doc/Screenshots/2.png)| ![Android](./doc/Screenshots/4.png)|
-		||![Android](./doc/Screenshots/5.png) |
+		|:-----:|:-----:|
+		|![windows](http://127.0.0.1:8888/doc/Screenshots/0.png)| ![Android](http://127.0.0.1:8888/doc/Screenshots/3.png)|
+		|![windows](http://127.0.0.1:8888/doc/Screenshots/1.png)| ![Android](http://127.0.0.1:8888/doc/Screenshots/5.png)|
+		|![windows](http://127.0.0.1:8888/doc/Screenshots/2.png)|![Android](http://127.0.0.1:8888/doc/Screenshots/4.png) |
 
 	4. Known Issues.
 
