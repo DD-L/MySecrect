@@ -59,6 +59,7 @@ void load_qml(QQmlApplicationEngine& engine, const QString& baseUrlArg) {
 #if defined(Q_OS_ANDROID) || defined(Q_OS_IOS)
     //const QUrl initialUrl("file:///android_asset/html/home.htm?webChannelBaseUrl=ws://127.0.0.1:12345"); // mobile
     const QUrl initialUrl("file:///android_asset/html/home.htm" + baseUrlArg); // mobile
+    //const QUrl initialUrl("file:///storage/sdcard0/download/html/home.htm" + baseUrlArg); // mobile
 #else
     //const QUrl initialUrl("qrc:/html/home.htm?webChannelBaseUrl=ws://127.0.0.1:12345"); // Desktop
     const QUrl initialUrl("qrc:/html/home.htm" + baseUrlArg); // Desktop
@@ -115,6 +116,7 @@ void Force_Quit_regardless_of_memory_leaks() {
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
+    QGuiApplication::setQuitOnLastWindowClosed(true);
 
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
     // There are many problems and bugs in QtWebKit,
