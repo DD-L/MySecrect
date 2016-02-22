@@ -75,4 +75,5 @@ useless/
 
 !libs/Androidarmeabiv7a/libcryptopp.a
 !libs/MinGW32bit/libcryptopp.a
+!CLI/Makefile*
 
