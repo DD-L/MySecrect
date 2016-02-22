@@ -1,0 +1,18 @@
+1. Build mysecret.exe
+
+    target:
+        bin/mysecret.exe
+
+    command:
+        e.g.
+        $ make
+        or
+        $ make FORCE=false
+
+2. Run mysecret.exe
+    
+    command:
+        e.g.
+        $ cd bin
+        $ ./mysecret.exe --help
+
