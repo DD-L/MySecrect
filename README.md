@@ -6,9 +6,11 @@ A simple encryption tool
 * v0.0.2-alpha
 	
 	1. 新特性
+
 		* 从这个版本(v0.0.2-alpha)开始，MySecret 支持易用的图形用户界面. 
 		* MySecret 成为“混合式 `Hybrid` 应用程序”, 采用 C++/JavaScript/HTML/CSS 编写. 
 		* 多平台支持：Android, Windows, MinGW, Linux, Cygwin.
+
 			| GUI   | CLI   |
 			|:-----:|:-----:|
 			|Android| Linux |
@@ -16,7 +18,9 @@ A simple encryption tool
 			| MinGW | MinGW | 
 		
 		* 不再对 "Secret Key" 做 首尾空白字符 剔除处理 `trim()`.
+
 	2. 二进制程序 (GUI)
+
 		* Android
 			* x86  暂未提供
 			* armeabi 暂未提供
@@ -27,6 +31,7 @@ A simple encryption tool
 		* ...
 
 	3. 部分截图.
+
 		|Desktop|Android|
 		|:-----:|:-----:|
 		|![windows](./doc/Screenshots/0.png)| ![Android](./doc/Screenshots/3.png)|
@@ -73,6 +78,7 @@ A simple encryption tool
 ### Build
 
 ##### Get Code
+
 *
 	```shell
 	$ git clone -b core https://github.com/DD-L/MySecrect
@@ -141,6 +147,7 @@ A simple encryption tool
 		
 
 2. 修改 project 文件 `MySecret.pro` 中的变量:
+
 	* INCLUDEPATH
 	* LIBS
 
@@ -149,6 +156,7 @@ A simple encryption tool
 4. ...
 
 ##### CLI
+
 *
 	```shell
 	$ cd /path/to/MySecret/CLI
