@@ -79,7 +79,6 @@ A simple encryption tool
 
 ##### Get Code
 
-*
 	```shell
 	$ git clone -b core https://github.com/DD-L/MySecrect
 	$ cd MySecrect
@@ -157,7 +156,6 @@ A simple encryption tool
 
 ##### CLI
 
-*
 	```shell
 	$ cd /path/to/MySecret/CLI
 	$ make
