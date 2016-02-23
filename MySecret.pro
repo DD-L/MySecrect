@@ -5,7 +5,7 @@ VERSION = 0.0.2
 QT += qml quick core websockets webchannel
 #webkitwidgets webchannel
 #CONFIG += c++11 console
-CONFIG += c++11
+CONFIG += c++11 -static
 
 !osx:qtHaveModule(webengine) {
         QT += webengine
