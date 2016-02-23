@@ -9,27 +9,31 @@ A simple encryption tool
 
 		* 从这个版本(v0.0.2-alpha)开始，MySecret 支持易用的图形用户界面. 
 		* MySecret 成为“混合式 `Hybrid` 应用程序”, 采用 C++/JavaScript/HTML/CSS 编写. 
-		* 多平台支持：Android, Windows, MinGW, Linux, Cygwin.
+		* 多平台支持：Android, Windows, Linux, Cygwin.
 
-			| GUI   | CLI   |
+			|  GUI  |  CLI  |
 			|:-----:|:-----:|
 			|Android| Linux |
-			|Windows| Cygwin|
-			| MinGW | MinGW | 
+			|Windows| Cygwin| 
 		
 		* 不再对 "Secret Key" 做 首尾空白字符 剔除处理 `trim()`.
 
-	2. 二进制程序 (GUI)
+	2. 二进制程序
+		
+		2.1 GUI
 
 		* Android
-			* x86  暂未提供
-			* armeabi 暂未提供
+			* x86  【暂未提供】
+			* armv5 【暂未提供】
 			* [armeabi-v7]()
 		* Windows
-			* msvc 2013 暂未提供
-			* [MinGW-4.9.2-32bit]()
-		* ...
+			* msvc  【暂未提供】
+			* msvc  静态编译版本 【暂未提供】
+			* [MinGW-4.9.2-32bit]() （不包含几百兆的依赖: `Qt 5.5 & MinGW 4.9.2-32bit DLL's`）
+			* [MinGW-4.9.2-32bit 静态编译版本]()
 
+		2.2 CLI 暂未提供
+			
 	3. 部分截图.
 
 		|Desktop|Android|
@@ -84,7 +88,7 @@ A simple encryption tool
 	$ git submodule init
 	$ git submodule update
 
-##### GUI 
+##### BUILD GUI 
 
 1. 编译 lproxy/contrib/cryptopp 静态库 `libcryptopp.a`. 
 
@@ -152,7 +156,7 @@ A simple encryption tool
 
 4. ...
 
-##### CLI
+##### BUILD CLI
 
 	$ cd /path/to/MySecret/CLI
 	$ make
