@@ -14,7 +14,8 @@ A simple encryption tool
 			|  GUI  |  CLI  |
 			|:-----:|:-----:|
 			|Android| Linux |
-			|Windows| Cygwin| 
+			|Windows| Cygwin|
+			| Linux Desktop |
 		
 		* 不再对 "Secret Key" 做 首尾空白字符 剔除处理 `trim()`.
 
@@ -25,14 +26,18 @@ A simple encryption tool
 		* Android
 			* x86  【暂未提供】
 			* armv5 【暂未提供】
-			* [armeabi-v7]()
+			* [armeabi-v7]() （11.8MB）
 		* Windows
 			* msvc  【暂未提供】
 			* msvc  静态编译版本 【暂未提供】
-			* [MinGW-4.9.2-32bit]() （不包含几百兆的依赖: `Qt 5.5 & MinGW 4.9.2-32bit DLL's`）
-			* MinGW-4.9.2-32bit 静态编译版本 【暂不提供, 因为用到了QtWebKit， 而静态编译 QtWebKit 巨麻烦】
+			* [MinGW-4.9.2-32bit]() （*1.48MB 的* `MySecret.exe` + *90MB 的 Qt 环境依赖库*: `Qt 5.5 & MinGW 4.9.2-32bit DLL's`）
+			* MinGW-4.9.2-32bit 静态编译版本 【暂不提供】
+		* Linux Desktop Environment【暂不提供】
 
-		2.2 CLI 【暂未提供】
+		2.2 CLI 
+		
+		* Linux 【暂未提供】
+		* Cygwin 【暂未提供】
 			
 	3. 部分截图.
 
