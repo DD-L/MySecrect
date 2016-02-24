@@ -44,8 +44,8 @@ A simple encryption tool
 		|Desktop|Android|
 		|:-----:|:-----:|
 		|![windows](./doc/Screenshots/0.png)| ![Android](./doc/Screenshots/3.png)|
-		|![windows](./doc/Screenshots/1.png)| ![Android](./doc/Screenshots/5.png)|
-		|![windows](./doc/Screenshots/2.png)| ![Android](./doc/Screenshots/4.png)|
+		|![windows](./doc/Screenshots/1.png)| ![Android](./doc/Screenshots/4.png)|
+		|![windows](./doc/Screenshots/2.png)| ![Android](./doc/Screenshots/5.png)|
 
 	4. Known Issues.
 
