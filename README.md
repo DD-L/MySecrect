@@ -30,9 +30,9 @@ A simple encryption tool
 			* msvc  【暂未提供】
 			* msvc  静态编译版本 【暂未提供】
 			* [MinGW-4.9.2-32bit]() （不包含几百兆的依赖: `Qt 5.5 & MinGW 4.9.2-32bit DLL's`）
-			* [MinGW-4.9.2-32bit 静态编译版本]()
+			* MinGW-4.9.2-32bit 静态编译版本 【暂不提供, 因为用到了QtWebKit， 而静态编译 QtWebKit 巨麻烦】
 
-		2.2 CLI 暂未提供
+		2.2 CLI 【暂未提供】
 			
 	3. 部分截图.
 
