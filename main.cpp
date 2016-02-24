@@ -68,7 +68,12 @@ void load_qml(QQmlApplicationEngine& engine, const QString& baseUrlArg) {
 
     QRect geometry = QGuiApplication::primaryScreen()->availableGeometry();
     if (! QGuiApplication::styleHints()->showIsFullScreen()) {
-        const QSize size = geometry.size() * 4 / 5;
+        QSize size = geometry.size() * 4 / 5;
+        const int maxheight = 590;
+        if (size.height() > maxheight ) {
+            size.setWidth(size.width() * maxheight / size.height());
+            size.setHeight(maxheight);
+        }
         const QSize offset = (geometry.size() - size) / 2;
         const QPoint pos = geometry.topLeft() + QPoint(offset.width(), offset.height());
         geometry = QRect(pos, size);
