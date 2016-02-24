@@ -1,2 +1,3 @@
 * QtWebkit 改用 QtWebEngine 。
 * 界面 WebView 不再铺满整个窗体。 比如页首部分，将采用 Qt 代码代替 HTML 代码实现, 以提升交互体验。
+* 为简陋的界面美化上色
