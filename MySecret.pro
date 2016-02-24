@@ -66,6 +66,7 @@ android {
 }
 win32 {
         LIBS += -L"$$_PRO_FILE_PWD_/libs/MinGW32bit" -lcryptopp
+        RC_ICONS = $$PWD/icon/64x64.ico
 }
 
 
