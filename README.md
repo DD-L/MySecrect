@@ -26,11 +26,11 @@ A simple encryption tool
 		* Android
 			* x86  【暂未提供】
 			* armv5 【暂未提供】
-			* [armeabi-v7](https://github.com/DD-L/MySecrect/releases) （apk 11.8MB）
+			* [armeabi-v7](https://github.com/DD-L/MySecrect/releases/download/v0.0.2-alpha/build-MySecret-Android_for_armeabi_v7a_GCC_4_9_Qt_5_5_1.zip) （apk 11.8MB）
 		* Windows
 			* msvc  【暂未提供】
 			* msvc  静态编译版本 【暂未提供】
-			* [MinGW-4.9.2-32bit](https://github.com/DD-L/MySecrect/releases) （*1.48MB 的* `MySecret.exe` + *90MB 的 Qt 环境依赖库*: `Qt 5.5 & MinGW 4.9.2-32bit DLL's`, 压缩后共 24.5MB）
+			* [MinGW-4.9.2-32bit](https://github.com/DD-L/MySecrect/releases/download/v0.0.2-alpha/build-MySecret-Desktop_Qt_5_5_1_MinGW_4.9.2_32bit.7z) （*1.48MB 的* `MySecret.exe` + *90MB 的 Qt 环境依赖库*: `Qt 5.5 & MinGW 4.9.2-32bit DLL's`, 压缩后共 24.5MB）
 			* MinGW-4.9.2-32bit 静态编译版本 【暂不提供】
 		* Linux Desktop Environment【暂不提供】
 
