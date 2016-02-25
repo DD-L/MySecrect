@@ -27,9 +27,12 @@ public slots:
         This slot is invoked from the HTML client side and the text displayed on the server side.
     */
     void receiveStatus(const QString& text);
-    void receiveKey(const QString& key);
-    void receiveInfo2Encrypt(const QString& info);
-    void receiveInfo2Decrypt(const QString& info);
+    //void receiveKey(const QString& key);
+    //void receiveInfo2Encrypt(const QString& info);
+    //void receiveInfo2Decrypt(const QString& info);
+    void encrypt(const QString& key, const QString& info);
+    void decrypt(const QString& key, const QString& info);
+
     void copy2clipboard(const QString& results);
     void clearClipboard();
     void appQuit();
