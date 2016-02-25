@@ -169,7 +169,7 @@ A simple encryption tool
 	$ make
 
 
-
+### [LICENSE](./LICENSE) 
 
 	
 	
