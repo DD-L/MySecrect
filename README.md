@@ -1,9 +1,9 @@
 # MySecrect
 A simple encryption tool
 
-### Version
+### [Version](https://github.com/DD-L/MySecrect/releases)
 
-* v0.0.2-alpha
+* [v0.0.2-alpha](https://github.com/DD-L/MySecrect/releases/tag/v0.0.2-alpha)
 	
 	1. 新特性
 
