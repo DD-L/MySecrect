@@ -26,7 +26,7 @@ A simple encryption tool
 		* Android
 			* x86  【暂未提供】
 			* armv5 【暂未提供】
-			* [armeabi-v7](https://github.com/DD-L/MySecrect/releases) （11.8MB）
+			* [armeabi-v7](https://github.com/DD-L/MySecrect/releases) （apk 11.8MB）
 		* Windows
 			* msvc  【暂未提供】
 			* msvc  静态编译版本 【暂未提供】
