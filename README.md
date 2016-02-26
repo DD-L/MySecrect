@@ -84,6 +84,7 @@ A simple encryption tool
 	  -s, --string         String.
 
 	```
+
 ### How to contribute
 
 为 `MySecret` 贡献 Issues 和 代码。 see [here](./doc/how2contribute.md)
