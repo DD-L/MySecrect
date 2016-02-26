@@ -93,14 +93,14 @@ A simple encryption tool
 
 ##### Get Code
 	
-	$ git clone -b core https://github.com/DD-L/MySecrect
+	$ git clone -b develop https://github.com/DD-L/MySecrect
 	$ cd MySecrect
 	$ git submodule init
 	$ git submodule update
 
 或见 [How to contribute](./doc/how2contribute.md) 为 `MySecret`贡献代码部分。
 
-##### BUILD GUI 
+##### Build GUI 
 
 1. 编译 lproxy/contrib/cryptopp 静态库 `libcryptopp.a`. 
 
@@ -168,7 +168,7 @@ A simple encryption tool
 
 4. ...
 
-##### BUILD CLI
+##### Build CLI
 
 	$ cd /path/to/MySecret/CLI
 	$ make
