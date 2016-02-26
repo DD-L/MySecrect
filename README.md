@@ -1,9 +1,9 @@
 # MySecrect
 A simple encryption tool
 
-### Version
+### [Version](https://github.com/DD-L/MySecrect/releases)
 
-* v0.0.2-alpha
+* [v0.0.2-alpha](https://github.com/DD-L/MySecrect/releases/tag/v0.0.2-alpha)
 	
 	1. 新特性
 
@@ -85,15 +85,20 @@ A simple encryption tool
 
 	```
 
+### How to contribute
+
+为 `MySecret` 贡献 Issues 和 代码。 see [here](./doc/how2contribute.md)
 
 ### Build
 
 ##### Get Code
-
+	
 	$ git clone -b core https://github.com/DD-L/MySecrect
 	$ cd MySecrect
 	$ git submodule init
 	$ git submodule update
+
+或见 [How to contribute](./doc/how2contribute.md) 为 `MySecret`贡献代码部分。
 
 ##### BUILD GUI 
 
