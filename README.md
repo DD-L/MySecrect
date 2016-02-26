@@ -84,16 +84,20 @@ A simple encryption tool
 	  -s, --string         String.
 
 	```
+### How to contribute
 
+为 `MySecret` 贡献 Issues 和 代码。 see [here](./doc/how2contribute.md)
 
 ### Build
 
 ##### Get Code
-
+	
 	$ git clone -b core https://github.com/DD-L/MySecrect
 	$ cd MySecrect
 	$ git submodule init
 	$ git submodule update
+
+或见 [How to contribute](./doc/how2contribute.md) 为 `MySecret`贡献代码部分。
 
 ##### BUILD GUI 
 
