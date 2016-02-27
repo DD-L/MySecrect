@@ -1,13 +1,14 @@
 # MySecrect
-A simple encryption tool
 
-### [Version](https://github.com/DD-L/MySecrect/releases)
+一个简单、安全、跨平台的加解密工具
+
+### [Releases](https://github.com/DD-L/MySecrect/releases)
 
 * [v0.0.2-alpha](https://github.com/DD-L/MySecrect/releases/tag/v0.0.2-alpha)
 	
 	1. 新特性
 
-		* 从这个版本(v0.0.2-alpha)开始，MySecret 支持易用的图形用户界面. 
+		* 从 [v0.0.2-alpha](https://github.com/DD-L/MySecrect/releases/tag/v0.0.2-alpha) 开始，MySecret 支持易用的图形用户界面. 
 		* MySecret 成为“混合式 `Hybrid` 应用程序”, 采用 C++/JavaScript/HTML/CSS 编写. 
 		* 多平台支持：Android, Windows, Linux, Cygwin.
 
@@ -55,9 +56,9 @@ A simple encryption tool
 
 	5. [TODO](./TODO)
 
-* v0.0.1
+* [v0.0.1](https://github.com/DD-L/lproxy/tree/master/src/core/crypto/test/easteregg)
 
-	命令行界面的 MySecret。 此版本与 v0.0.2-alpha CLI 相差无几。
+	命令行界面的 MySecret。此版本与 v0.0.2-alpha CLI 相差无几。
 	
 	```
 	$ ./mysecret.exe --help
