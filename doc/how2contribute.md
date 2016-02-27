@@ -18,6 +18,7 @@
 * 当前 `core` 分支作为 Feature branch 来用，主要是 GUI 开发用的分支，也曾被当做 ‘开发分支’来使用过，这个分支以后会做出调整并更名。
 * `CLI` 分支是 开发命令行界面的分支 属于 Feature branch。
 * 我们暂时没有 release 分支。
+* `develop` 分支以后将作为 开发分支。
 * 当前的默认分支是 `develop`, 不打算将 `master` 作为默认分支。
 
 
@@ -40,7 +41,7 @@
 **尚未创建组织，目前仅支持 fork + PR 的贡献代码的方式**
 
 1. 找一个开放的 issue，或创建一个新的 issue, 写一些东西，然后记下 issue 编号#. (推荐提交 PR 前，先创建 issue)
-2. Fork 这个 repo，确保你同步的是 开发分支上 的最新 变动。
+2. Fork 这个 repo，确保你同步的是‘开发分支’上的最近的更新。
 3. Fork 之后，你自己账户下会多一个 repo， 然后再 clone 到本地, 获得代码。
 
 	```shell
@@ -52,11 +53,12 @@
 	git submodule update
 	```
 
-4. 创建一个分支，可以是 Feature branch 或 Bug fixes branch
+4. 基于某分支创建一个新分支，可以是 Feature branch 或 Bug fixes branch。比如：
 
 	```shell
+	# 从 本地的 develop 分支检出一个新分支，并切换的到新分支 
 	# 推荐这种命名方式（非强制）
-	git checkout -b issue_<##>_<description>
+	git checkout -b issue_<##>_<description> develop
 	```
 
 5. 在你新建的分支上完成开发测试，并编写相应的开发文档。
@@ -65,5 +67,4 @@
 8. 然后在 github 上切换到你新建的远程分支，创建 PR `New pull requset` 。然后在页面的左边选择要提交的目的地，这里通常是 base fork: DD-L/MySerect base: develop ， 意思是 请求合并到 DD-L/MySerect 的 develop 分支下；右边是 你要提交的分支。
 9. 如果出现 ` Able to merge. These branches can be automatically merged.` 字样，恭喜你可以顺利提交；如果提示 不能自动合并，说明有冲突，请先修改冲突后再提交 PR。如果repo 拥有者看到一个有冲突的 分支请求合并，会很不舒服，甚至会直接忽略掉这个 PR。
 10. 在 创建 PR 的页面会有一个 comment，在最好里面写一些描述性信息，或 直接写 "See #1234 or Fix #1234" 之类的文字（#后面的数字是你第一步创建的 issue 编号），这样就能自动和 issue 关联起来。
-
 
