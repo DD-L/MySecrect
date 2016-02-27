@@ -22,23 +22,23 @@
 * 当前的默认分支是 `develop`, 不打算将 `master` 作为默认分支。
 
 
-**以下的任何一种方式，都是在为`MySecret` 项目做贡献。**
+### 2. 以下的任何一种方式，都是在为`MySecret`项目做贡献
 
-### 2. 创建一个[`new issue`](https://github.com/DD-L/MySecrect/issues) 为 MySecret 贡献 ideas
+#### 2.1 方式一: 创建一个[`new issue`](https://github.com/DD-L/MySecrect/issues) 为 MySecret 贡献 ideas
 
 以下是抄来的，我就不翻译了：
  
->1. Look through existing issues to see if your issue already exists.
->2. If your issue already exists, comment on its thread with any information you have. Even if this is simply to note that you are having the same problem, it is still helpful!
->3. Always be as descriptive as you can.
->4. What is the expected behavior? What is the actual behavior? What are the steps to reproduce?
->5. Attach screenshots, videos, GIFs if possible.
->6. Include library version or branch experiencing the issue.
->7. Include OS version and devices experiencing the issue.
+> 1. Look through existing issues to see if your issue already exists.
+> 2. If your issue already exists, comment on its thread with any information you have. Even if this is simply to note that you are having the same problem, it is still helpful!
+> 3. Always be as descriptive as you can.
+> 4. What is the expected behavior? What is the actual behavior? What are the steps to reproduce?
+> 5. Attach screenshots, videos, GIFs if possible.
+> 6. Include library version or branch experiencing the issue.
+> 7. Include OS version and devices experiencing the issue.
 
-### 3. 提交一个 pull request (PR) 为 MySecret 贡献代码
+#### 2.2 方式二: 提交一个 pull request (PR) 为 MySecret 贡献代码
 
-**尚未创建组织，目前仅支持 fork + PR 的贡献代码的方式**
+*尚未创建组织，目前仅支持 fork + PR 的贡献代码的方式*
 
 1. 找一个开放的 issue，或创建一个新的 issue, 写一些东西，然后记下 issue 编号#. (推荐提交 PR 前，先创建 issue)
 2. Fork 这个 repo，确保你同步的是‘开发分支’上的最近的更新。
@@ -67,4 +67,3 @@
 8. 然后在 github.com 上切换到你新建的远程分支，创建 PR `New pull requset` 。然后在页面的左边选择要提交的目的地，这里通常是 base fork: DD-L/MySerect base: develop，意思是 请求合并到 DD-L/MySerect 的 develop 分支下；右边是 你要提交的分支。
 9. 如果出现 ` Able to merge. These branches can be automatically merged.` 字样，恭喜你可以顺利提交；如果提示 不能自动合并，说明有冲突，请先修改冲突后再提交 PR。如果 repo 拥有者看到一个有冲突的 分支请求合并，会很不舒服，甚至会直接忽略掉这个 PR。
 10. 在 创建 PR 的页面会有一个 comment，在最好里面写一些描述性信息，或 直接写 "See #1234 or Fix #1234" 之类的文字（#后面的数字是你第一步创建的 issue 编号），这样就能自动和 issue 关联起来。
-
