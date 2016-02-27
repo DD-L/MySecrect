@@ -60,7 +60,7 @@
 	```
 
 5. 在你新建的分支上完成开发测试，并编写相应的开发文档。
-6. 在提交 PR 前，最好先添加一个远程源 `git remote add <自定义远程源名字> https://github.com/DD-L/MySecrect.git`， 然后`git pull <自定义远程源名字> <远程源下的一个 branch 名字, 通常是 develop>`, 以便查看是否同 MySecret 有文件冲突，文件冲突由两人同时修改相同文件造成的。 良好的习惯是解决好冲突后，再提交 PR.
+6. 在提交 PR 前，最好先添加一个远程源 `git remote add <自定义远程源名字> https://github.com/DD-L/MySecrect.git`， 然后`git pull <自定义远程源名字> <远程源下的一个 branch 名字, 通常是 develop>`, 以便查看是否同 DD-L/MySecret 有文件冲突，文件冲突由两人同时修改相同文件造成的。良好的习惯是解决好冲突后，再提交 PR。
 7. 将本地分支的 commit 都 push 到你的远程仓库的分支 `git push -u origin <yourbranchname>`
 8. 然后在 github 上切换到你新建的远程分支，创建 PR `New pull requset` 。然后在页面的左边选择要提交的目的地，这里通常是 base fork: DD-L/MySerect base: develop ， 意思是 请求合并到 DD-L/MySerect 的 develop 分支下；右边是 你要提交的分支。
 9. 如果出现 ` Able to merge. These branches can be automatically merged.` 字样，恭喜你可以顺利提交；如果提示 不能自动合并，说明有冲突，请先修改冲突后再提交 PR。如果repo 拥有者看到一个有冲突的 分支请求合并，会很不舒服，甚至会直接忽略掉这个 PR。
