@@ -38,9 +38,10 @@
 
 #### 方式二: 提交一个 pull request (PR) 为 MySecret 贡献代码
 
-*尚未创建组织，目前仅支持 fork + PR 的贡献代码的方式*
+* *尚未创建组织，目前仅支持 fork + PR 的贡献代码的方式*
+* *以下出现`推荐`、`最好`等建议型词汇，都是非强制的，按照你自己的喜好也可以*
 
-1. 找一个开放的 issue，或创建一个新的 issue，写一些东西，然后记下 issue 编号#. (推荐提交 PR 前，先创建 issue)
+1. 找一个开放的 [issue](https://github.com/DD-L/MySecrect/issues)，或创建一个新的 [issue](https://github.com/DD-L/MySecrect/issues)，写一些东西，然后记下 issue 编号#。(推荐提交 PR 前，先创建 issue，换言之，“RP 最好和 issue 关联起来”)
 2. Fork 这个 repo，确保你同步的是‘开发分支’上的最近的更新。
 3. Fork 之后，你自己 github 账户下会多一个 repo，然后再 clone 到本地，获得代码。
 
