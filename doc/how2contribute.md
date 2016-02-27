@@ -24,7 +24,7 @@
 
 ### 2. 以下的任何一种方式，都是在为`MySecret`项目做贡献
 
-#### 2.1 方式一: 创建一个[`new issue`](https://github.com/DD-L/MySecrect/issues) 为 MySecret 贡献 ideas
+#### 方式一: 创建一个[`new issue`](https://github.com/DD-L/MySecrect/issues) 为 MySecret 贡献 ideas
 
 以下是抄来的，我就不翻译了：
  
@@ -36,7 +36,7 @@
 > 6. Include library version or branch experiencing the issue.
 > 7. Include OS version and devices experiencing the issue.
 
-#### 2.2 方式二: 提交一个 pull request (PR) 为 MySecret 贡献代码
+#### 方式二: 提交一个 pull request (PR) 为 MySecret 贡献代码
 
 *尚未创建组织，目前仅支持 fork + PR 的贡献代码的方式*
 
