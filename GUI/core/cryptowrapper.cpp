@@ -1,4 +1,4 @@
-#include "cryptowrapper.h"
+#include "GUI/core/cryptowrapper.h"
 #include <crypto/aes_crypto.h>
 #include <crypto/base64_crypto.h>
 
