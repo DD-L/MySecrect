@@ -67,7 +67,7 @@
 
 5. 在你新建的分支上完成开发测试，并编写相应的开发文档 （文档放在 doc 目录下）。
 6. ~~在提交 PR 前，最好先添加一个 DD-L/MySecrect 的远程源：`git remote add <自定义远程源名字> https://github.com/DD-L/MySecrect.git`， 然后`git pull <自定义远程源名字> <远程源下的一个 branch 名字, 通常是 develop>`, 以便查看是否同 DD-L/MySecret 有文件冲突，文件冲突由两人同时修改相同文件造成的。良好的习惯是解决好冲突后，再提交 PR~~。
-7. 在提交 PR 前，最好先同步下上游的改动，以避免提交 PR 时可能的文件冲突
+7. 在提交 PR 前，最好先同步一下上游的改动，以避免提交 PR 时可能的文件冲突
 	
 	```shell
 	$ git checkout develop
