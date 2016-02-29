@@ -47,25 +47,40 @@
 3. Fork 之后，你自己 github 账户下会多一个 repo，然后再 clone 到本地，获得代码。
 
 	```shell
-	# clone 指定远程分支(通常是 develop) 到本地的 ./MySecret 目录
-	git clone -b <branch> https://github.com/<yourusername>/MySecret
-	cd MySecret
-	# 同步子模块
-	git submodule init
-	git submodule update
+	$ # clone 指定远程分支(通常是 develop) 到本地的 ./MySecret 目录
+	$ git clone -b <branch> https://github.com/<yourusername>/MySecret
+	$ cd MySecret
+	$ # 添加 上游，以便以后能随时同步 上游改动
+	$ git remote add upstream https://github.com/DD-L/MySecrect.git
+	$ # 同步子模块
+	$ git submodule init
+	$ git submodule update
 	```
 
 4. 基于某分支创建一个新分支，可以是 Feature branch 或 Bug fixes branch。比如：
 
 	```shell
-	# 从 本地的 开发分支（通常是 develop）检出一个新分支，并切换的到新分支 
-	# 推荐这种命名方式（非强制）
-	git checkout -b issue_<##>_<description> develop
+	$ # 从 本地的 开发分支（通常是 develop）检出一个新分支，并切换的到新分支 
+	$ # 推荐这种命名方式（非强制）
+	$ git checkout -b issue_<##>_<description> develop
 	```
 
 5. 在你新建的分支上完成开发测试，并编写相应的开发文档 （文档放在 doc 目录下）。
-6. 在提交 PR 前，最好先添加一个 DD-L/MySecrect 的远程源：`git remote add <自定义远程源名字> https://github.com/DD-L/MySecrect.git`， 然后`git pull <自定义远程源名字> <远程源下的一个 branch 名字, 通常是 develop>`, 以便查看是否同 DD-L/MySecret 有文件冲突，文件冲突由两人同时修改相同文件造成的。良好的习惯是解决好冲突后，再提交 PR。
-7. 将本地分支的 commit 都 push 到你的远程仓库的分支 `git push -u origin <yourbranchname>`，如果你 fork 的远程 repo 中没有这个名字的分支，该命令会自动创建一个新远程分支。
-8. 然后在 github 上，你 fork 的 repo 里切换到你新建的远程分支，创建 PR `New pull requset` 。随后在页面的左边，选择你要提交的目的地，这里通常是 base fork: DD-L/MySerect base: develop，意思是 请求合并到 DD-L/MySerect 的 develop 分支下；右边是 你要提交的分支。
-9. 如果出现“` Able to merge. These branches can be automatically merged.`”字样，恭喜你可以开开心心的提交；如果提示 不能自动合并，说明有冲突，请先解决冲突后再提交 PR。如果 repo 拥有者看到一个有冲突的 分支请求合并，会很不舒服，甚至会直接忽略掉这个 PR。
-10. 在 创建 PR 的页面会有一个 comment，在最好里面写一些描述性信息，或 直接写 "See #1234 or Fix #1234" 之类的文字（#后面的数字是你第一步创建的 issue 编号），这样就能自动和 [issue](https://github.com/DD-L/MySecrect/issues) 关联起来。
+6. ~~在提交 PR 前，最好先添加一个 DD-L/MySecrect 的远程源：`git remote add <自定义远程源名字> https://github.com/DD-L/MySecrect.git`， 然后`git pull <自定义远程源名字> <远程源下的一个 branch 名字, 通常是 develop>`, 以便查看是否同 DD-L/MySecret 有文件冲突，文件冲突由两人同时修改相同文件造成的。良好的习惯是解决好冲突后，再提交 PR~~。
+7. 在提交 PR 前，最好先同步下上游的改动，以避免提交 PR 时可能的文件冲突
+	
+	```shell
+	$ git checkout develop
+	$ # 拉取 上游
+	$ git fetch upstream
+	$ # 合并 上游develop分支 到 当前的本地分支去
+	$ git merge upstream/develop
+	$ # 合并 到你新建的分支 中去
+	$ git checkout <yourbranchname>
+	$ git merge --no-ff develop
+	$ # 如果有文件冲突，修改冲突文件，然后 commit 即可。
+	``` 
+8. 将本地分支的 commit 都 push 到你的远程仓库的分支 `git push -u origin <yourbranchname>`，如果你 fork 的远程 repo 中没有这个名字的分支，该命令会自动创建一个新远程分支。
+9. 然后在 github 上，你 fork 的 repo 里切换到你新建的远程分支，创建 PR `New pull requset` 。随后在页面的左边，选择你要提交的目的地，这里通常是 base fork: DD-L/MySerect base: develop，意思是 请求合并到 DD-L/MySerect 的 develop 分支下；右边是 你要提交的分支。
+10. 如果出现“` Able to merge. These branches can be automatically merged.`”字样，恭喜你可以开开心心的提交；如果提示 不能自动合并，说明有冲突，请先解决冲突后再提交 PR。如果 repo 拥有者看到一个有冲突的 分支请求合并，会很不舒服，甚至会直接忽略掉这个 PR。
+11. 在 创建 PR 的页面会有一个 comment，在最好里面写一些描述性信息，或 直接写 "See #1234 or Fix #1234" 之类的文字（#后面的数字是你第一步创建的 issue 编号），这样就能自动和 [issue](https://github.com/DD-L/MySecrect/issues) 关联起来。
