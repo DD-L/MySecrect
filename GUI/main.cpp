@@ -22,9 +22,9 @@
 
 #include <QtWebSockets/QWebSocketServer>
 #include <QtWebChannel/QtWebChannel>
-#include "websocketchannel/websocketclientwrapper.h"
-#include "websocketchannel/websockettransport.h"
-#include "webchannelobject/webchannelobject.h"
+#include "GUI/websocketchannel/websocketclientwrapper.h"
+#include "GUI/websocketchannel/websockettransport.h"
+#include "GUI/webchannelobject/webchannelobject.h"
 
 
 /**

@@ -29,16 +29,16 @@ android-no-sdk {
 
     #deployment.files += $files($PWD/html/*)
     html.path = /assets/html/
-    html.files += ./html/home.htm
+    html.files += ./GUI/html/home.htm
     css.path  = /assets/html/css
-    css.files += ./html/css/jquery.mobile-1.4.5.min.css
-    css.files += ./html/css/style.css
-    css.files += ./html/css/ajax-loader.gif
+    css.files += ./GUI/html/css/jquery.mobile-1.4.5.min.css
+    css.files += ./GUI/html/css/style.css
+    css.files += ./GUI/html/css/ajax-loader.gif
     javascript.path = /assets/html/js
-    javascript.files += ./html/js/jquery-1.10.2.min.js
-    javascript.files += ./html/js/jquery.mobile-1.4.5.min.js
-    javascript.files += ./html/js/qwebchannel.js
-    javascript.files += ./html/js/home.js
+    javascript.files += ./GUI/html/js/jquery-1.10.2.min.js
+    javascript.files += ./GUI/html/js/jquery.mobile-1.4.5.min.js
+    javascript.files += ./GUI/html/js/qwebchannel.js
+    javascript.files += ./GUI/html/js/home.js
 
     INSTALLS += html css javascript
 } else:unix {

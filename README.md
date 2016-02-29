@@ -159,9 +159,10 @@
 	* INCLUDEPATH
 	* LIBS
 
-3. 工程导入 `lproxy/src/core/crypto/*.h` 和 `lproxy/src/core/crypto/*.cpp`
+3. 工程导入 `lproxy/src/core/crypto/*.h` 和 `lproxy/src/core/crypto/*.cpp` (此步骤已经在 MySecret.pro 中配置过了，不必重复配置，可忽略)
 
-4. ...
+4. 工程导入 资源文件 `GUI/qml.qrc`
+5. 构建项目
 
 ##### Build CLI
 

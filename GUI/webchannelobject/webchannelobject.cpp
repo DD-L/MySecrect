@@ -1,10 +1,9 @@
-﻿#include "webchannelobject/webchannelobject.h"
-
-#include <QtCore/QDebug>
+﻿#include <QtCore/QDebug>
 #include <QtWebSockets/QWebSocketServer>
 #include <QClipboard>
 
-#include "core/cryptowrapper.h"
+#include "GUI/webchannelobject/webchannelobject.h"
+#include "GUI/core/cryptowrapper.h"
 
 QT_BEGIN_NAMESPACE
 

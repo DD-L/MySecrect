@@ -12,11 +12,11 @@ CONFIG += c++11
         DEFINES += QT_WEBVIEW_WEBENGINE_BACKEND
 }
 
-SOURCES += main.cpp \
-    websocketchannel/websocketclientwrapper.cpp \
-    websocketchannel/websockettransport.cpp \
-    webchannelobject/webchannelobject.cpp \
-    core/cryptowrapper.cpp \
+SOURCES += GUI/main.cpp \
+    GUI/core/cryptowrapper.cpp \
+    GUI/webchannelobject/webchannelobject.cpp \
+    GUI/websocketchannel/websocketclientwrapper.cpp \
+    GUI/websocketchannel/websockettransport.cpp \
     lproxy/src/core/crypto/aes_crypto.cpp \
     lproxy/src/core/crypto/base64_crypto.cpp \
     lproxy/src/core/crypto/encryptor.cpp \
@@ -26,20 +26,21 @@ SOURCES += main.cpp \
     lproxy/src/core/crypto/xor_crypto.cpp \
     lproxy/src/core/crypto/rc4.c
 
-RESOURCES += qml.qrc
+RESOURCES += \
+    GUI/qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
 
 DISTFILES += \
-    android-sources/AndroidManifest.xml
+    GUI/android-sources/AndroidManifest.xml
 
 HEADERS += \
-    websocketchannel/websocketclientwrapper.h \
-    websocketchannel/websockettransport.h \
-    webchannelobject/webchannelobject.h \
-    core/cryptowrapper.h \
+    GUI/core/cryptowrapper.h \
+    GUI/webchannelobject/webchannelobject.h \
+    GUI/websocketchannel/websocketclientwrapper.h \
+    GUI/websocketchannel/websockettransport.h \
     lproxy/src/core/crypto/aes_crypto.h \
     lproxy/src/core/crypto/base64_crypto.h \
     lproxy/src/core/crypto/encryptor.h \
@@ -48,7 +49,6 @@ HEADERS += \
     lproxy/src/core/crypto/rc4_crypto.h \
     lproxy/src/core/crypto/rsa_crypto.h \
     lproxy/src/core/crypto/xor_crypto.h
-
 
 # include path
 INCLUDEPATH += $$_PRO_FILE_PWD_/lproxy/contrib/cryptopp/ $$_PRO_FILE_PWD_/lproxy/src/core/
@@ -62,11 +62,11 @@ android {
         } else {
             LIBS += -L"$$_PRO_FILE_PWD_/libs/Android" -lcryptopp
         }
-        ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-sources
+        ANDROID_PACKAGE_SOURCE_DIR = $$PWD/GUI/android-sources
 }
 win32 {
         LIBS += -L"$$_PRO_FILE_PWD_/libs/MinGW32bit" -lcryptopp
-        RC_ICONS = $$PWD/icon/64x64.ico
+        RC_ICONS = $$PWD/GUI/icon/64x64.ico
 }
 
 
