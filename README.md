@@ -40,13 +40,7 @@
 		* Linux 【暂未提供】
 		* Cygwin 【暂未提供】
 			
-	3. 部分截图.
-
-		|Desktop|Android|
-		|:-----:|:-----:|
-		|![windows](./doc/Screenshots/0.png)| ![Android](./doc/Screenshots/3.png)|
-		|![windows](./doc/Screenshots/1.png)| ![Android](./doc/Screenshots/4.png)|
-		|![windows](./doc/Screenshots/2.png)| ![Android](./doc/Screenshots/5.png)|
+	3. 一些截图: [Screenshots](./doc/v0.0.2-alpha/screenshots.md).
 
 	4. Known Issues.
 
