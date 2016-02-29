@@ -1,6 +1,6 @@
 # v0.0.2-alpha
 
-### Screenshots.
+### Screenshots
 
 |Desktop|Android|
 |:-----:|:-----:|
