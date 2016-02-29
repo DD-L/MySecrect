@@ -15,8 +15,9 @@
 
 但 MySecret 当前并不是完全按照此模型创建和使用分支，需要提醒的是：
 
-* 当前 `core` 分支作为 Feature branch 来用，主要是 GUI 开发相关的分支，这个分支可能以后会做出调整并更名。
-* `CLI` 分支是 开发命令行界面的分支 属于 Feature branch。
+* ~~当前 `core` 分支作为 Feature branch 来用，主要是 GUI 开发相关的分支，这个分支可能以后会做出调整并更名。~~
+* `GUI` 分支是有之前的 `core` 分支更名之后的分支，专职“图形用户界面”相关的开发。
+* `CLI` 分支是 开发“命令行界面”的分支，属于 Feature branch。
 * 我们暂时没有 release 分支。
 * `develop` 分支是 开发分支。
 * 当前的默认分支是 `develop`, 不打算将 `master` 作为默认分支。
